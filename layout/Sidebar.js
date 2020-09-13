@@ -9,7 +9,7 @@ export default function Sidebar({ hidden, onClick }) {
             }`}
             style={{ top: '4rem', height: 'calc(100vh - 4rem)' }}
         >
-            <div className="w-full h-full p-4 md:mb-16 overflow-y-auto">
+            <div className="w-full p-4 md:mb-16 overflow-y-auto">
                 <ul onClick={onClick}>
                     <NavLink href="/docs/getting-started">
                         Getting Started

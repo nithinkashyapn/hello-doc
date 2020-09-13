@@ -8,9 +8,13 @@ export default function Index() {
                 <title>Hello Doc</title>
             </Head>
             <div className="prose">
+                <h1>
+                    Hello! Welcome to hello doc! 
+                </h1>
                 <p>
-                    Hello! Welcome to hello doc! Please go here to checkout the
-                    documentation. Please note, you may be auto redirected.
+                    Please click on the sidebar to
+                    checkout the documentation. P.S., you may be auto
+                    redirected.
                 </p>
             </div>
         </Layout>

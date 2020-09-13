@@ -29,7 +29,10 @@ export default function Doc({ postData }) {
             <Head>
                 <title>{title}</title>
             </Head>
-            <div dangerouslySetInnerHTML={{ __html: postData }} />
+            <div
+                className="prose"
+                dangerouslySetInnerHTML={{ __html: postData }}
+            />
         </Layout>
     );
 }

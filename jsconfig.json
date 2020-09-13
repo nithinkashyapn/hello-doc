@@ -3,5 +3,5 @@
         "baseUrl": "node_modules",
         "jsx": "react"
     },
-    "exclude": ["node_modules", "out"]
+    "exclude": ["node_modules", "docs"]
 }
