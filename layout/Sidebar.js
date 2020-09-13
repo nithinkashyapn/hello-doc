@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import * as Files from '../data/files';
 import { useRouter } from 'next/router';
 
 export default function Sidebar({ hidden, onClick }) {
@@ -10,15 +11,20 @@ export default function Sidebar({ hidden, onClick }) {
             style={{ top: '4rem', height: 'calc(100vh - 4rem)' }}
         >
             <div className="w-full p-4 md:mb-16 overflow-y-auto">
-                <ul onClick={onClick}>
-                    <NavLink href="/docs/getting-started">
-                        Getting Started
-                    </NavLink>
-                </ul>
+                <NavLinkList slugs={Files} onClickHandler={() => onClick} />
             </div>
         </aside>
     );
 }
+
+const NavLinkList = (props) => {
+    const slugs = props.slugs;
+    const slugList = slugs.map((slug, i) => {
+        let hrefUrl = '/docs/' + slug;
+        return <NavLink href={hrefUrl} key={hrefUrl}>{slug}</NavLink>;
+    });
+    return <ul onClick={props.onClickHandler}>{slugList}</ul>;
+};
 
 function NavLink({ href, children }) {
     const { asPath } = useRouter();

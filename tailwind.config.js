@@ -1,5 +1,3 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
 module.exports = {
     purge: [
         './components/**/*.js',
@@ -9,13 +7,6 @@ module.exports = {
         './next.config.js'
     ],
     plugins: [require('@tailwindcss/typography')],
-    theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Inter', ...defaultTheme.fontFamily.sans]
-            }
-        }
-    },
     variants: {
         opacity: ['responsive', 'hover', 'focus', 'group-hover']
     },
